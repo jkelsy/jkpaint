@@ -1,0 +1,49 @@
+canvas {
+    border: solid 0.5px green;
+    border-left: none;
+    border-right: none;
+}
+
+ul { 
+    border: none;  
+    display: flex!important;
+}
+
+ul li { 
+    display: inline-block;
+}
+
+li {
+    border: 0.5px solid silver;
+    align-items: center!important;
+    justify-content:center!important;
+    display: flex!important;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+mat-icon {
+    border:none;    
+}
+
+.selected {
+    background-color: yellow;
+    border: dashed orange 0.5px;
+}
+
+.paint-stroke-color{
+    z-index: 9999!important;
+}
+
+.ui-widget-overlay {
+    background: #666666;
+    opacity: .50;
+    filter: Alpha(Opacity=50);
+    z-index: 9999!important;
+  }
+
+  .color-picker-span{
+      margin-left: 5px;
+  }

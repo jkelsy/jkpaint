@@ -1,0 +1,34 @@
+<ul>
+    <li (click)="onClickShape('TLine')"
+        [ngClass]="{'selected': selectedShape === 'TLine'}">
+        <mat-icon>timeline</mat-icon>
+        Line
+    </li>    
+    <li (click)="onClickShape('TSquare')"
+        [ngClass]="{'selected': selectedShape === 'TSquare'}">
+        <mat-icon>crop_square</mat-icon>
+        Square
+    </li>
+    <li (click)="onClickShape('TCircle')"
+        [ngClass]="{'selected': selectedShape === 'TCircle'}">
+        <mat-icon>radio_button_unchecked</mat-icon>
+        Circle
+    </li>    
+    <li>
+        <p-colorPicker [(ngModel)]="strokeColor"></p-colorPicker>
+         <span class="color-picker-span">Stroke Color</span>
+    </li>
+    <li>
+        <p-colorPicker [(ngModel)]="fillColor"></p-colorPicker>
+         <span class="color-picker-span">Fill Color</span>
+    </li>
+</ul>
+
+<canvas #canvas width="1050" height="350"
+    (mousedown)="onCanvasMouseDown($event)"
+    (mouseup)="onCanvasMouseUp($event)"  
+    (mousemove)="onCanvasMouseMove($event)">
+</canvas>
+
+<span> {{selectedShape}}</span>
+<span style="float: right; margin-right:10px; font-size:12px">Powered by: Juan Manuel Kelsy Romero</span>
